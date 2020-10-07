@@ -1,0 +1,55 @@
+.card {
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+
+}
+
+.table {
+   border: 1px solid black;
+}
+
+.input-group-text{
+   border: none !important;
+   background-color: white;
+}
+
+.card {
+   border-radius: 20px;
+}
+
+
+#pagination-wrapper{
+   justify-content: center;
+   align-self: center;
+   align-items: center;
+   display: block;
+   left: 0;
+   right: 0;
+   margin: auto;
+
+}
+
+.fa-edit {
+   color: blue;
+}
+
+.fa-trash {
+   color: red;
+}
+
+.button-add {
+   margin-top: 2rem;
+   margin-left: 10rem;
+}
+
+.form-data {
+   visibility: hidden;
+}
+
+.rows-data:hover {
+  transition: 0.3s;
+   background-color: #b8baff;
+}
