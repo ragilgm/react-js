@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="login mt-5">
+      <div class="container">
+        <h3 class="ml-5 mt-3">form Login</h3>
+        <div class="row">
+          <div class="col-lg-6 ">
+             <div class="card ">
+              <div class=" shadow mx-5 my-5 ">
+                 
+                  <form>
+                      <input type="hidden" id="id">
+                      <div class="form-group">
+                          <label for="username">Username</label>
+                          <input type="text" class="form-control" id="username"  placeholder="masukan username">
+                        </div>
+                      <div class="form-group">
+                        <label for="Password">Password</label>
+                        <input type="password" class="form-control" id="password"  placeholder="masukan Password">
+                      </div>
+                      
+                      
+                  </form>
+                  <button type="submit" class="btn btn-primary btn-sm mt-3" onclick="loginHandler()">Login</button>
+                  <button type="submit" class="btn btn-info btn-sm mt-3" onclick="addHandler()">Register</button>
+              </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="register mt-5">
+        <h3 class="ml-5 mt-3">form Register</h3>
+        <div class="col-lg-6 ">
+           <div class="card ">
+            <div class=" shadow mx-5 my-5 ">
+               
+                <form>
+                    <div class="form-group">
+                        <label for="usernameRegist">Username</label>
+                        <input type="text" class="form-control" id="usernameRegist"  placeholder="masukan username" required>
+                      </div>
+                    <div class="form-group">
+                        <label for="passwordRegist">password</label>
+                        <input type="password" class="form-control" id="passwordRegist"  placeholder="masukan password" required>
+                      </div>
+                    <div class="form-group">
+                      <label for="nama">Nama</label>
+                      <input type="text" class="form-control" id="nama"  placeholder="masukan nama" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="alamat">Alamat</label>
+                      <input type="text" class="form-control" id="alamat" placeholder="Masukan Alamat" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="pekerjaan">Pekerjaan</label>
+                      <input type="text" class="form-control" id="pekerjaan" placeholder="Masukan Pekerjaan" required>
+                    </div>
+                    <label for="hobby">Hobby</label>
+                    <div id="hobby">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                              <input type="checkbox" value="belajar" id="belajar"> <label for="belajar" class="ml-2">belajar</label>
+                            </div>
+                            <div class="input-group-text ml-3">
+                              <input type="checkbox" value="bermain" id="bermain"> <label for="bermain" class="ml-2">bermain</label> 
+                            </div>
+                            <div class="input-group-text ml-3">
+                              <input type="checkbox" value="ngoding" id="ngoding"> <label for="ngoding" class="ml-2">ngoding</label> 
+                            </div>
+
+                          </div>
+                    </div>
+                    
+                </form>
+                <button type="submit" class="btn btn-info btn-sm mt-3" onclick="addBiodata()">Register</button>
+                <button type="submit" class="btn btn-primary btn-sm mt-3" onclick="loginPage()">Login</button>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="home">
+    <div id="menu">
+      <div class="button-add">
+        <button class="btn btn-sm btn-primary" onclick="logoutHandler()">Log out</button>
+      </div>
+    </div>
+    <div class="container">
+      <div id="form-data">
+        
+      </div>
+    </div>
+
+
+      
+    <div class="container mt-5">
+      <h3 class="text-center">DATA KARYAWAN</h3>
+      <table class="table table-bordered mt-2">
+          <thead>
+            <tr class="text-center">
+              <th scope="col">No</th>
+              <th scope="col">Username</th>
+              <th scope="col">Password</th>
+              <th scope="col">Nama</th>
+              <th scope="col">Alamat</th>
+              <th scope="col">Pekerjaan</th>
+              <th scope="col">Hobby</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            
+          </tbody>
+        </table>
+  </div>
+  <div class="container ">
+   <div class="row">
+    <div id="pagination-wrapper"></div>
+   </div>
+   <hr>
+   <br>
+</div>
+    </div>
+  
+
+
+<script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>
