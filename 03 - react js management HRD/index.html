@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+   <link rel="stylesheet" href="./style.css">
+   
+   <title>HRD</title>
+   
+</head>
+
+<body>
+
+   <!-- login section -->
+   <div class="login">
+   
+      <div class="container mt-5">
+         <div class="row">
+          
+            <div class="card login-form col-lg-6 ">
+               <h5 class="text-center mb-2">Login Form</h5>
+               <div class="form">
+                  <div class="form-group">
+                     <label for="username">Username :</label>
+                     <input type="text" id="username" placeholder="please enter username" class="form-control">
+              
+                  </div>
+                  <div class="form-group">
+                     <label for="password">password :</label>
+                     <input type="text" id="password" placeholder="please enter password" class="form-control">
+                  </div>
+
+                  <button class="btn btn-sm btn-success" onclick="loginHandler()">Login</button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+    <!-- login section -->
+
+   <!-- Menu Section -->
+   
+   <div class="cv">
+      <div class="container mt-5">
+         <div class="row cv-detail">
+            
+         </div>
+      </div>
+   </div>
+   
+   <!-- Menu Section -->
+
+
+   <!-- table karyawan  -->
+
+   <div class="data-karyawan">
+      <div class="container">
+         <h2 class="mt-3 mb-5">Admin page</h2>
+         <div class="row">
+            <div class="col-3">
+               <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+                <a class="nav-link" id="v-pills-add-karyawan-tab" data-toggle="pill" href="#v-pills-add-karyawan" role="tab" aria-controls="v-pills-add-karyawan" aria-selected="false">Add Karyawan</a>
+                <a class="nav-link" id="v-pills-add-logout-tab" data-toggle="pill" href="#v-pills-add-logout" role="tab" aria-controls="v-pills-add-logout" aria-selected="false" onclick="logoutAdmin()">logout</a>
+                <a class="nav-link" id="v-pills-edit-tab" data-toggle="pill" href="#v-pills-edit" role="tab" aria-controls="v-pills-edit" aria-selected="false">Edit Karyawan</a>
+              </div>
+            </div>
+            <div class="col-8 ml-5">
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+                  <h3>Management Karyawan</h3>
+                  
+                  <div class="row list-karyawan">
+                     
+                  </div>
+
+                </div>
+                <!-- end tab setting -->
+                <div class="tab-pane fade" id="v-pills-add-karyawan" role="tabpanel" aria-labelledby="v-pills-add-karyawan-tab">
+
+                  <div class="container">
+                     
+                        <div class="col-lg-10 ml-5 ml-5 card  px-5 py-2">
+                           <h3 class="text-center ">Add Karyawan</h3>
+                    
+                              <label for="img">Select image :</label>
+                              <input type="file" id="img" name="img"/>
+                              <div class="row mt-3">
+                                 <div class="form-group mr-3 col-lg-5">
+                                    <label for="username">username</label>
+                                    <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter username">
+                                  </div>
+                                 <div class="form-group mr-3 col-lg-5">
+                                    <label for="password">password</label>
+                                    <input type="text" class="form-control" id="password" aria-describedby="emailHelp" placeholder="Enter password">
+                                  </div>
+                                 <div class="form-group mr-3 col-lg-5">
+                                    <label for="fullname">Fullname</label>
+                                    <input type="text" class="form-control" id="fullname" aria-describedby="emailHelp" placeholder="Enter fullname">
+                                  </div>
+                                  <div class="form-group mr-3 col-lg-5">
+                                     <label for="date-of-birth">Date Of Birth</label>
+                                     <input type="date" class="form-control" id="date-of-birth" aria-describedby="emailHelp" placeholder="Enter date-of-birth">
+                                   </div>
+                                   <div class="form-group col-lg-12">
+                                      <label for="gender">Gender</label><br>
+                                      <input type="radio" name="gender" id="laki-laki" value="laki-laki" class="mr-2">Laki Laki
+                                      <input type="radio" name="gender" id="perempuan" value="perempuan" class="ml-3 mr-2">Perempuan
+                                    </div>
+                                
+                                  
+                                  <div class="form-group mr-3 col-5">
+                                    <label for="status">Status</label>
+                                    <input type="text" class="form-control" id="status" aria-describedby="emailHelp" placeholder="Enter status">
+                                 </div>
+                                  <div class="form-group mr-3 col-5">
+                                    <label for="address">Address</label>
+                                    <input type="text" class="form-control" id="address" aria-describedby="emailHelp" placeholder="Enter address">
+                                 </div>
+                                  <div class="form-group mr-3 col-5">
+                                    <label for="contact">contact</label>
+                                    <input type="text" class="form-control" id="contact" aria-describedby="emailHelp" placeholder="Enter contact">
+                                 </div>
+                                  <div class="form-group mr-3 col-5">
+                                    <label for="email">email</label>
+                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                                 </div>
+                                  <div class="form-group mr-3 col-5">
+                                    <label for="position">position</label>
+                                    <input type="text" class="form-control" id="position" aria-describedby="positionHelp" placeholder="Enter position">
+                                 </div>
+                                  <div class="form-group mr-3 col-5">
+                                    <label for="role">role</label>
+                                    <input type="text" class="form-control" id="role" aria-describedby="roleHelp" placeholder="Enter role">
+                                 </div>
+                                  <div class="form-group mr-3 col-5">
+                                    <label for="Selary">Selary</label>
+                                    <input type="text" class="form-control" id="Selary" aria-describedby="SelaryHelp" placeholder="Enter Selary">
+                                 </div>
+                              </div>
+                          
+                           <button type="submit" class="btn btn-primary btn-sm col-lg-3" onclick="createDataKaryawan()">Submit</button>
+                           
+                        </div>
+
+                     
+                  </div>
+
+                </div>
+                <!-- end tab setting -->
+               
+                    <div class="edit">
+                     <h3 class="text-center">Edit Karyawan</h3>
+                     <div class="col-lg-10 ml-5 card  px-5 py-2">
+                           <input type="hidden" id="id">
+                           <label for="img" class="mt-3">Select image:</label>
+                           <input type="file" id="img" name="img"/>
+                           <div class="row mt-3">
+                              <div class="form-group mr-3 col-lg-5">
+                                 <label for="fullname">Fullname</label>
+                                 <input type="text" class="form-control" id="fullname" aria-describedby="emailHelp" placeholder="Enter fullname">
+                               </div>
+                              <div class="form-group mr-3 col-lg-5">
+                                 <label for="username">username</label>
+                                 <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter username">
+                               </div>
+                              <div class="form-group mr-3 col-lg-5">
+                                 <label for="password">password</label>
+                                 <input type="text" class="form-control" id="password" aria-describedby="emailHelp" placeholder="Enter password">
+                               </div>
+                               <div class="form-group mr-3 col-lg-5">
+                                  <label for="date-of-birth">Date Of Birth</label>
+                                  <input type="date" class="form-control" id="date-of-birth" aria-describedby="emailHelp" placeholder="Enter date-of-birth">
+                                </div>
+                                <div class="form-group col-lg-12">
+                                   <label for="gender">Gender</label><br>
+                                   <input type="radio" name="gender" value="laki-laki" class="mr-2">Laki Laki
+                                   <input type="radio" name="gender"  value="perempuan" class="ml-3 mr-2">Perempuan
+                                 </div>
+                             
+                               
+                               <div class="form-group mr-3 col-5">
+                                 <label for="status">Status</label>
+                                 <input type="text" class="form-control" id="status" aria-describedby="emailHelp" placeholder="Enter status">
+                              </div>
+                               <div class="form-group mr-3 col-5">
+                                 <label for="address">Address</label>
+                                 <input type="text" class="form-control" id="address" aria-describedby="emailHelp" placeholder="Enter address">
+                              </div>
+                               <div class="form-group mr-3 col-5">
+                                 <label for="contact">contact</label>
+                                 <input type="text" class="form-control" id="contact" aria-describedby="emailHelp" placeholder="Enter contact">
+                              </div>
+                               <div class="form-group mr-3 col-5">
+                                 <label for="email">email</label>
+                                 <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                              </div>
+                               <div class="form-group mr-3 col-5">
+                                 <label for="postition">postition</label>
+                                 <input type="text" class="form-control" id="postition" aria-describedby="postitionHelp" placeholder="Enter postition">
+                              </div>
+                               <div class="form-group mr-3 col-5">
+                                 <label for="Selary">Selary</label>
+                                 <input type="text" class="form-control" id="Selary" aria-describedby="SelaryHelp" placeholder="Enter Selary">
+                              </div>
+                           </div>
+                       
+                        <button type="submit" class="btn btn-primary btn-sm col-lg-3" onclick="updateDataKaryawan()">Submit</button>
+                        
+                     </div>
+                    </div>
+
+                  
+               </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+      </div>
+   </div>
+
+   <!-- table karyawan  -->
+
+   
+
+   
+   <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

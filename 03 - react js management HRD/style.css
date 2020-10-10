@@ -1,0 +1,88 @@
+.login{
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
+   width: 60%;
+   padding: 10px;
+   align-items: center;
+   justify-content: center;
+   align-self: center;
+   animation: bounce;
+   animation-duration:2s; 
+   --animate-delay: 0.9s;
+}
+
+
+.login-form {
+   margin: auto;
+   width: 60%;
+   padding: 10px;
+   border-radius: 10px;
+   padding: 3rem;
+   background-color: #a6e6f5;
+}
+
+.detail-cv{
+   border-radius: 20px;
+   background-color: aliceblue;
+   border: 2px solid black;
+}
+
+.photo-profile{
+   margin-left: 2rem;
+   margin-right: 2rem;
+   margin-top: 3rem;
+
+}
+
+.photo-profile img {
+   max-width: 200px;
+   max-height: 200px;
+   border-radius: 100%;
+   border: 2px solid black;
+}
+
+.curiculum-vitae{
+
+  margin-top: 3rem;
+  margin-left: 5rem;
+}
+
+.cv {
+   display: none;
+}
+
+.card {
+   border-radius: 20px !important;
+}
+
+.card-img-top{
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+}
+
+.button-detail{
+   border-radius: 10px;
+}
+
+.card-item{
+   margin-top: 2rem;
+   margin-right: 2rem;
+   -webkit-box-shadow: 4px 4px 25px -12px rgba(0,0,0,0.75);
+   -moz-box-shadow: 4px 4px 25px -12px rgba(0,0,0,0.75);
+   box-shadow: 4px 4px 25px -12px rgba(0,0,0,0.75);
+}
+
+#v-pills-edit-tab {
+   visibility: hidden;
+}
+
+.data-karyawan {
+   display: none;
+}
+
+.edit{
+   display: none;
+}
