@@ -1,0 +1,25 @@
+
+.login100-form-title {
+   animation: backInUp; 
+   animation-duration: 2s; 
+}
+
+.login100-form {
+   animation: backInUp; 
+   animation-duration: 3s;
+   --animate-delay: 0.9s; 
+}
+
+#myVideo {
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   min-width: 100%; 
+   min-height: 100%;
+
+ }
+ 
+
+ .limiter{
+    overflow: hidden;
+ }

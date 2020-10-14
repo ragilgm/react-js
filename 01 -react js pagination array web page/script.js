@@ -83,63 +83,63 @@ function buildTable() {
     pageButtons(data.pages)
     }
     
-    function pagination(querySet, page, rows) {
+    function pagination(photos, page, rows) {
 
         var trimStart = (page - 1) * rows
         var trimEnd = trimStart + rows
         
-        var trimmedData = querySet.slice(trimStart, trimEnd)
+        var trimmedData = photos.slice(trimStart, trimEnd)
         
-        var pages = Math.round(querySet.length / rows);
+        var pages = Math.round(photos.length / rows);
         
         return {
-           'querySet': trimmedData,
-           'pages': pages,
+           pagination: trimmedData,
+           pages: pages,
         }
 }
 
 function pageButtons(pages) {
-    var wrapper = document.getElementById('pagination-wrapper')
+    // var wrapper = document.getElementById('pagination-wrapper')
     
-    wrapper.innerHTML = ``
+    // wrapper.innerHTML = ``
     
-    var maxLeft = (state.page - Math.floor(state.window / 2))
-    var maxRight = (state.page + Math.floor(state.window / 2))
+    // var maxLeft = (state.page - Math.floor(state.window / 2))
+    // var maxRight = (state.page + Math.floor(state.window / 2))
     
-    if (maxLeft < 1) {
-       maxLeft = 1
-       maxRight = state.window
-    }
+    // if (maxLeft < 1) {
+    //    maxLeft = 1
+    //    maxRight = state.window
+    // }
     
-    if (maxRight > pages) {
-       maxLeft = pages - (state.window - 1)
+    // if (maxRight > pages) {
+    //    maxLeft = pages - (state.window - 1)
        
-       if (maxLeft < 1){
-          maxLeft = 1
-       }
-       maxRight = pages
-    }
+    //    if (maxLeft < 1){
+    //       maxLeft = 1
+    //    }
+    //    maxRight = pages
+    // }
     
 
-    for (var page = maxLeft; page <= maxRight; page++) {
-        wrapper.innerHTML += `<button value=${page} class="page btn btn-sm btn-link">${page}</button>`
-      }
+    // for (var page = maxLeft; page <= maxRight; page++) {
+    //     wrapper.innerHTML += `<button value=${page} class="page btn btn-sm btn-link">${page}</button>`
+    //   }
       
-      if (state.page != 1) {
-         wrapper.innerHTML = `<button value=${1} class="page btn btn-sm btn-link">&#171; First</button>` + wrapper.innerHTML
-      }
+    //   if (state.page != 1) {
+    //      wrapper.innerHTML = `<button value=${1} class="page btn btn-sm btn-link">&#171; First</button>` + wrapper.innerHTML
+    //   }
       
-      if (state.page != pages) {
-         wrapper.innerHTML += `<button value=${pages} class="page btn btn-sm btn-link">Last &#187;</button>`
-      }
+    //   if (state.page != pages) {
+    //      wrapper.innerHTML += `<button value=${pages} class="page btn btn-sm btn-link">Last &#187;</button>`
+    //   }
       
-      $('.page').on('click', function() {
-         $('#table-body').empty()
+    //   $('.page').on('click', function() {
+    //      $('#table-body').empty()
       
-         state.page = Number($(this).val())
+    //      state.page = Number($(this).val())
       
-         buildTable()
-      })
+    //      buildTable()
+    //   })
       
 }    
       
